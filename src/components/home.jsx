@@ -26,21 +26,34 @@ function Home() {
     return () => clearTimeout(typingTimer);
   }, [charIndex, content]);
   return (
-    <div className="flex mt-8">
-      <div className="w-3/5 flex justify-center items-center">
+    <div className="sm:flex mt-8">
+      <div className="sm:w-3/5 w-full flex justify-center items-center">
         <div className="text-violet-400 ">
           <motion.p
-            className="font-semibold text-2xl"
+            className="sm:text-3xl text-lg"
             animate={{ x: 0 }}
             transition={{ duration: 1 }}
-            whileHover={{scale:1.05}}
-            style={{ fontSize: "9vh" }}
             initial={{ x: 2000 }}
           >
-            Mohamed Nayeem CE
+            Hey,I'm
           </motion.p>
           <motion.p
-            className="mt-3 text-2xl"
+          className=""
+            style={{ fontWeight: "1000", fontSize: "9vh" }}
+            animate={{ y: 0,opacity:1 }}
+            initial={{ y: 150,opacity:0 }}
+            whileHover={{
+              // scale: 1.05,
+              textShadow: "0 0 40px rgba(69, 2, 150, 1)",
+            }}
+            transition={{ duration: 0.5, delay: 1 }}
+          >
+            {" "}
+            Mohamed Nayeem CE
+          </motion.p>
+
+          <motion.p
+            className="text-2xl"
             animate={{ x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
             initial={{ x: 2000 }}
@@ -49,7 +62,7 @@ function Home() {
           </motion.p>
         </div>
       </div>
-      <div className="w-2/5">
+      <div className="sm:w-2/5 px-4 sm:px-0">
         <motion.img
           whileHover={{
             scale: "1.02",
@@ -57,7 +70,7 @@ function Home() {
           }}
           animate={{ x: 0 }}
           transition={{ duration: 1 }}
-          initial={{ filter: "saturate(0.1)", x: -2000 }}
+          initial={{ filter: "saturate(0.1) hue-rotate(-30deg)", x: -2000 }}
           src={image}
           alt=""
           className="rounded-lg shadow-xl"
