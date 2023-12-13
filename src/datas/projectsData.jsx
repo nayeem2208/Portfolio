@@ -2,6 +2,7 @@ export const projectsData = [
     {
         name:'Dream Home',
         image:'/project-images/medicare.png',
+        gif:,
         git:'https://github.com/nirajcs/medicare',
         technologies:['ReactJs','Redux','Json Web Token','ExpressJS','NodeJS','MongoDB','Tailwind CSS','Socket.IO','Nodemailer','Multer','Datatables','React-ChartJS','Stripe Payment','AWS','Nginx'],
         description:"Medicare is a web application for booking doctor appointments,The application consists of User,Doctor and Admin sides."

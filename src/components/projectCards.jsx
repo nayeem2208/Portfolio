@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from 'framer-motion';
-import image from "../assets/assets/WhatsApp Image 2023-12-07 at 7.17.28 PM.jpeg";
+import image from "../assets/assets/framer-motion todo.gif";
 
 function ProjectCards() {
   return (

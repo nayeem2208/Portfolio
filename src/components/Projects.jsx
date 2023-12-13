@@ -1,5 +1,7 @@
 import React from 'react'
 import ProjectCards from './projectCards'
+import image from "../assets/assets/framer-motion todo.gif";
+
 
 function Projects() {
   return (
@@ -7,13 +9,14 @@ function Projects() {
   <p className="text-5xl font-bold text-violet-400 flex justify-center">
     Projects
   </p>
-  <div className="grid grid-cols-3 gap-4 flex justify-items-center">
+  <div className="grid grid-cols-3 gap-4 flex justify-items-center mt-12">
     <ProjectCards />
     <ProjectCards />
     <ProjectCards />
     <ProjectCards />
     <ProjectCards />
     <ProjectCards />
+    
   </div>
 </div>
 
