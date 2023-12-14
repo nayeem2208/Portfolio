@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
+import './button.css'
+import cv from '../assets/assets/Nayeem full stack developer-5.pdf'
 
 function Aboutme() {
   const ref = useRef(null);
@@ -9,20 +11,22 @@ function Aboutme() {
 
   useEffect(() => {
     if (inView) {
+      console.log(inView,'inview')
       mainControll.start("visible");
       colorControll.start("visible");
     }
     
   }, [inView]);
+  
 
   return (
-    <div className="p-12 mt-8 overflow-x-hidden " ref={ref}>
+    <div className=" p-4 md:p-12 mt-8 overflow-x-hidden " ref={ref}>
       <motion.p
         whileHover={{
-          color: "rgba(232, 217, 250)",
           x: 20,
           scale: "1.02",
-          textShadow: "0 0 40px rgba(115, 0, 255, 0.8)",
+          textShadow: "0 0 40px rgba(69, 2, 150, 1)",
+          // textShadow: "0 0 40px rgba(115, 0, 255, 0.8)",
         }}
         variants={{
           hidden: { opacity: 0, y: 100 },
@@ -30,14 +34,14 @@ function Aboutme() {
         }}
         initial="hidden"
         animate={mainControll}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
         className="font-bold text-5xl flex text-violet-400 justify-center mt-12 mb-24"
       >
         {" "}
         About Me
       </motion.p>
       <motion.div
-        className="flex"
+        className="md:flex "
         variants={{
           hidden: { opacity: 0, y: 100 },
           visible: { opacity: 1, y: 0 },
@@ -49,8 +53,8 @@ function Aboutme() {
         <div className="w-3/6 relative">
           <img src="" alt="" className="w-48 h-48 " />
         </div>
-        <div className="w-3/6 text-lg pr-8 mr-12 relative">
-          <motion.div
+        <div className="md:w-3/6 text-lg md:pr-8 md:mr-12 relative mt-8 md:mt-0">
+          {/* <motion.div
             className="bg-violet-800 "
             variants={{
               hidden: { left: 0 },
@@ -58,7 +62,7 @@ function Aboutme() {
             }}
             initial="hidden"
             animate={colorControll}
-            transition={{ duration: 0.7, delay: 0.7 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             style={{
               zIndex: 1,
               position: "absolute",
@@ -67,7 +71,7 @@ function Aboutme() {
               width: "120vh",
               height: "60vh",
             }}
-          ></motion.div>
+          ></motion.div> */}
           <motion.p className="text-violet-400" whileHover={{ scale: 1.01 }}>
             Hello, I'm{" "}
             <motion.span
@@ -92,11 +96,11 @@ function Aboutme() {
             ahead of industry trends. With a sharp analytical mind and effective
             problem-solving skills, I'm dedicated to delivering high-quality
             solutions. Beyond code, my excellent communication and interpersonal
-            skills make me a valuable collaborator in any team setting. Excited
-            about the endless possibilities of web development, I look forward
-            to contributing my skills and enthusiasm to create impactful digital
-            experiences.
+            skills make me a valuable collaborator in any team setting.
           </motion.p>
+          <a href={cv} target='_blank'  rel="noreferrer">
+          <button class="btn mt-2">Resume</button>
+          </a>
         </div>
       </motion.div>
     </div>

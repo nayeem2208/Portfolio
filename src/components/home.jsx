@@ -13,11 +13,11 @@ function Home() {
       if (charIndex <= content.length && first) {
         setText(content.substring(0, charIndex + 1));
         setCharIndex(charIndex + 1);
-        if (charIndex == content.length) setFirst(false);
+        if (charIndex === content.length) setFirst(false);
       } else if (!first) {
         setText(content.substring(0, charIndex + 1));
         setCharIndex(charIndex - 1);
-        if (charIndex == 1) {
+        if (charIndex === 1) {
           setFirst(true);
         }
       }
@@ -25,25 +25,24 @@ function Home() {
 
     return () => clearTimeout(typingTimer);
   }, [charIndex, content]);
+
   return (
-    <div className="sm:flex mt-8">
+    <div className="sm:flex mt-8 px-6">
       <div className="sm:w-3/5 w-full flex justify-center items-center">
-        <div className="text-violet-400 ">
+        <div className="text-center sm:text-left text-violet-400 mx-4 ">
           <motion.p
-            className="sm:text-3xl text-lg"
+            className="sm:text-3xl text-lg sm:mt-1 mt-12 font-bold"
             animate={{ x: 0 }}
             transition={{ duration: 1 }}
-            initial={{ x: 2000 }}
+            initial={{ x: -2000 }}
           >
-            Hey,I'm
+            Hey, I'm
           </motion.p>
           <motion.p
-          className=""
-            style={{ fontWeight: "1000", fontSize: "9vh" }}
-            animate={{ y: 0,opacity:1 }}
-            initial={{ y: 150,opacity:0 }}
+            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold sm:font-black"
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: 150, opacity: 0 }}
             whileHover={{
-              // scale: 1.05,
               textShadow: "0 0 40px rgba(69, 2, 150, 1)",
             }}
             transition={{ duration: 0.5, delay: 1 }}
@@ -53,10 +52,10 @@ function Home() {
           </motion.p>
 
           <motion.p
-            className="text-2xl"
+            className="text-lg sm:text-2xl mb-12 md:mb-0"
             animate={{ x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            initial={{ x: 2000 }}
+            initial={{ x: -2000 }}
           >
             {text}
           </motion.p>
@@ -66,15 +65,15 @@ function Home() {
         <motion.img
           whileHover={{
             scale: "1.02",
-            filter: "saturate(1)", // Adjust the value as needed (0.7 decreases saturation)
+            filter: "saturate(1)",
           }}
           animate={{ x: 0 }}
           transition={{ duration: 1 }}
           initial={{ filter: "saturate(0.1) hue-rotate(-30deg)", x: -2000 }}
           src={image}
           alt=""
-          className="rounded-lg shadow-xl"
-          style={{ height: "75vh" }}
+          className="rounded-lg shadow-xl w-full"
+          style={{ maxWidth: "75vh" }}
         />
       </div>
     </div>
