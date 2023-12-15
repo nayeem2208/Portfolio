@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import image from "../assets/assets/WhatsApp Image 2023-12-07 at 7.17.28 PM.jpeg";
 import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 function Home() {
   const [text, setText] = useState("");
@@ -44,21 +46,28 @@ function Home() {
             initial={{ y: 150, opacity: 0 }}
             whileHover={{
               textShadow: "0 0 40px rgba(69, 2, 150, 1)",
+              scale:1.05
             }}
             transition={{ duration: 0.5, delay: 1 }}
+            
           >
             {" "}
             Mohamed Nayeem CE
           </motion.p>
 
           <motion.p
-            className="text-lg sm:text-2xl mb-12 md:mb-0"
+            className="text-lg sm:text-2xl "
             animate={{ x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
             initial={{ x: -2000 }}
           >
             {text}
           </motion.p>
+          <div className="flex text-2xl mt-2  mb-12 md:mb-0 justify-center sm:justify-start">
+            <motion.a href="https://www.linkedin.com/in/mohamed-nayeem-c-e-523188207/" target="_blank" rel="noreferrer" whileHover={{scale:1.5}}><FaLinkedin className="mr-2"/></motion.a>
+            <motion.a href="https://github.com/nayeem2208" target="_blank" rel="noreferrer" whileHover={{scale:1.5}}><FaGithub className="mx-2"/ ></motion.a>
+            <motion.a href="https://leetcode.com/nayeemce/" target="_blank" rel="noreferrer" whileHover={{scale:1.5}}><SiLeetcode className="mx-2"/></motion.a>
+          </div>
         </div>
       </div>
       <div className="sm:w-2/5 px-4 sm:px-0">

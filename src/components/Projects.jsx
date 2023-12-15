@@ -49,6 +49,7 @@ function Projects() {
           initial="hidden"
           animate={mainControll}
           transition={{ duration: 0.5, delay: 0.3 }}
+          
       >
         Projects
       </motion.p>

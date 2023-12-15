@@ -1,7 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef,Suspense } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import './button.css'
 import cv from '../assets/assets/Nayeem full stack developer-5.pdf'
+import { Canvas } from "@react-three/fiber";
+import { Environment, OrbitControls } from "@react-three/drei";
+import Comp from '../../public/Comp'
 
 function Aboutme() {
   const ref = useRef(null);
@@ -51,27 +54,17 @@ function Aboutme() {
         transition={{ duration: 0.5, delay: 0.5 }}
       >
         <div className="w-3/6 relative">
-          <img src="" alt="" className="w-48 h-48 " />
+          <Canvas>
+            <ambientLight/>
+            <OrbitControls/>
+            <Suspense fallback={null}>
+              <Comp/>
+            </Suspense>
+            {/* <Environment preset="sunset"/> */}
+          </Canvas>
         </div>
         <div className="md:w-3/6 text-lg md:pr-8 md:mr-12 relative mt-8 md:mt-0">
-          {/* <motion.div
-            className="bg-violet-800 "
-            variants={{
-              hidden: { left: 0 },
-              visible: { left: "120%"},
-            }}
-            initial="hidden"
-            animate={colorControll}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            style={{
-              zIndex: 1,
-              position: "absolute",
-              top: 0,
-              right: 0,
-              width: "120vh",
-              height: "60vh",
-            }}
-          ></motion.div> */}
+         
           <motion.p className="text-violet-400" whileHover={{ scale: 1.01 }}>
             Hello, I'm{" "}
             <motion.span
