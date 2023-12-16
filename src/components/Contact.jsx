@@ -51,8 +51,8 @@ const Contact = () => {
           Say Something!!
         </motion.h1>
         <form className="form" ref={form} onSubmit={sendEmail}>
-          <div class="form-group">
-            <label for="email">Name</label>
+          <div className="form-group">
+            <label htmlFor="email">Name</label>
             <motion.input
             whileHover={{scale:1.05}}
               type="text"
@@ -64,7 +64,7 @@ const Contact = () => {
               className="w-full h-10 ps-5 rounded border border-2 border-gray-300"
             />
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label htmlFor="email">Email</label>
             <motion.input
             whileHover={{scale:1.05}}
@@ -77,7 +77,7 @@ const Contact = () => {
               className="w-full h-10 ps-5 rounded border border-2 border-gray-300"
             />
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label htmlFor="message">Message</label>
             <motion.textarea
             whileHover={{scale:1.05}}

@@ -4,7 +4,7 @@ import './button.css'
 import cv from '../assets/assets/Nayeem full stack developer-5.pdf'
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-import Comp from '../../public/Comp'
+import Scene from '../../public/Scene'
 
 function Aboutme() {
   const ref = useRef(null);
@@ -53,14 +53,14 @@ function Aboutme() {
         animate={mainControll}
         transition={{ duration: 0.5, delay: 0.5 }}
       >
-        <div className="w-3/6 relative">
-          <Canvas>
+        <div className=" w-full sm:w-3/6 relative mx-3">
+          <Canvas camera={{ position: [-4, 3, 6]}} >
             <ambientLight/>
-            <OrbitControls/>
+            <OrbitControls autoRotate/>
             <Suspense fallback={null}>
-              <Comp/>
+              <Scene/>
             </Suspense>
-            {/* <Environment preset="sunset"/> */}
+            <Environment preset="sunset"/>
           </Canvas>
         </div>
         <div className="md:w-3/6 text-lg md:pr-8 md:mr-12 relative mt-8 md:mt-0">
@@ -92,7 +92,7 @@ function Aboutme() {
             skills make me a valuable collaborator in any team setting.
           </motion.p>
           <a href={cv} target='_blank'  rel="noreferrer">
-          <button class="btn mt-2">Resume</button>
+          <button className="btn mt-2">Resume</button>
           </a>
         </div>
       </motion.div>
