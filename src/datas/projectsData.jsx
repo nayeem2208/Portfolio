@@ -47,8 +47,8 @@ export const projectsData = [
   },
   {
     name: "Password-Generator",
-    image: "../project-images/IMG_9200.jpg",
-    gif: "/project-images/psGen.gif",
+    image: "./project-images/IMG_9200.jpg",
+    gif: "./project-images/psGen.gif",
     git: "https://github.com/nayeem2208/Password_Generator",
     technologies: [
       "ReactJS",
