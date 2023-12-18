@@ -4,7 +4,9 @@ import './button.css'
 import cv from '../assets/assets/Nayeem full stack developer-5.pdf'
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-import Scene from '../../public/Scene'
+// import Scene from '../../public/Scene'
+import ComputerCanvas from "../canvas/computer";
+
 
 function Aboutme() {
   const ref = useRef(null);
@@ -54,14 +56,15 @@ function Aboutme() {
         transition={{ duration: 0.5, delay: 0.5 }}
       >
         <div className=" w-full sm:w-3/6 relative mx-3">
-          <Canvas camera={{ position: [-4, 3, 6]}} >
+          {/* <Canvas camera={{ position: [-4, 3, 6]}} >
             <ambientLight/>
             <OrbitControls autoRotate/>
             <Suspense fallback={null}>
               <Scene/>
             </Suspense>
             <Environment preset="sunset"/>
-          </Canvas>
+          </Canvas> */}
+          <ComputerCanvas />
         </div>
         <div className="md:w-3/6 text-lg md:pr-8 md:mr-12 relative mt-8 md:mt-0">
          
