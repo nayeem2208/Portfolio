@@ -1,8 +1,8 @@
 export const projectsData = [
   {
     name: "Dream Home",
-    image: "/project-images/IMG_9198.jpg",
-    gif: "/project-images/Dh.gif",
+    image: "./Portfolio/project-images/IMG_9198.jpg",
+    gif: "./Portfolio/project-images/Dh.gif",
     git: "https://github.com/nayeem2208/Dream_home",
     technologies: [
       "ReactJs",
@@ -47,7 +47,7 @@ export const projectsData = [
   },
   {
     name: "Password-Generator",
-    image: "/project-images/IMG_9200.jpg",
+    image: "../project-images/IMG_9200.jpg",
     gif: "/project-images/psGen.gif",
     git: "https://github.com/nayeem2208/Password_Generator",
     technologies: [
