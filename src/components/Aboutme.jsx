@@ -1,12 +1,11 @@
-import React, { useEffect, useRef,Suspense } from "react";
+import React, { useEffect, useRef, Suspense } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import './button.css'
-import cv from '../assets/assets/Nayeem full stack developer-5.pdf'
+import "./button.css";
+import cv from "../assets/assets/Nayeem full stack developer-7.pdf";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 // import Scene from '../../public/Scene'
 import ComputerCanvas from "../canvas/computer";
-
 
 function Aboutme() {
   const ref = useRef(null);
@@ -16,13 +15,11 @@ function Aboutme() {
 
   useEffect(() => {
     if (inView) {
-      console.log(inView,'inview')
+      console.log(inView, "inview");
       mainControll.start("visible");
       colorControll.start("visible");
     }
-    
   }, [inView]);
-  
 
   return (
     <div className=" p-4 md:p-12 mt-8 overflow-x-hidden " ref={ref}>
@@ -67,7 +64,6 @@ function Aboutme() {
           <ComputerCanvas />
         </div>
         <div className="md:w-3/6 text-lg md:pr-8 md:mr-12 relative mt-8 md:mt-0">
-         
           <motion.p className="text-violet-400" whileHover={{ scale: 1.01 }}>
             Hello, I'm{" "}
             <motion.span
@@ -86,16 +82,13 @@ function Aboutme() {
             <span className="font-bold text-violet-300">
               MongoDB, Express, ReactJS, and NodeJS,
             </span>{" "}
-            I bring a blend of front-end finesse and back-end efficiency to
-            every project. What sets me apart is my continuous commitment to
-            self-learning. I thrive on exploring new technologies and staying
-            ahead of industry trends. With a sharp analytical mind and effective
-            problem-solving skills, I'm dedicated to delivering high-quality
-            solutions. Beyond code, my excellent communication and interpersonal
-            skills make me a valuable collaborator in any team setting.
+            I bring clean code and
+            innovative solutions to every project. I thrive on continuous
+            learning, exploring new technologies, and turning creative concepts
+            into impactful web applications.
           </motion.p>
-          <a href={cv} target='_blank'  rel="noreferrer">
-          <button className="btn mt-2">Resume</button>
+          <a href={cv} target="_blank" rel="noreferrer">
+            <button className="btn mt-2">Resume</button>
           </a>
         </div>
       </motion.div>

@@ -1,8 +1,8 @@
 export const projectsData = [
   {
     name: "Dream Home",
-    image: "./Portfolio/project-images/IMG_9198.jpg",
-    gif: "./Portfolio/project-images/Dh.gif",
+    image: "./project-images/IMG_9198.jpg",
+    gif: "./project-images/Dh.gif",
     git: "https://github.com/nayeem2208/Dream_home",
     technologies: [
       "ReactJs",
@@ -25,8 +25,8 @@ export const projectsData = [
   },
   {
     name: "Fine Bonito",
-    image: "/project-images/IMG_9199.jpg",
-    gif: "/project-images/fineBonitoo.gif",
+    image: "./project-images/IMG_9199.jpg",
+    gif: "./project-images/fineBonitoo.gif",
     git: "https://github.com/nayeem2208/Project-1",
     technologies: [
       "ExpressJS",
@@ -63,8 +63,8 @@ export const projectsData = [
   },
   {
     name: "Todo App",
-    image: "/project-images/Screenshot (165).jpg",
-    gif: "/project-images/framer-motion todo.gif",
+    image: "./project-images/Screenshot (165).jpg",
+    gif: "./project-images/framer-motion todo.gif",
     technologies: ["TypeScript", "ReactJS", "Framer-motion"],
     git: "https://github.com/nayeem2208/Todo-Typescript",
     description:
@@ -72,7 +72,7 @@ export const projectsData = [
   },
   {
     name: "Netflix-clone",
-    image: "/project-images/netflix.png",
+    image: "./project-images/netflix.png",
     technologies: ["TMDB API", "React-youtube", "ReactJS"],
     git: "https://github.com/nayeem2208/Netflix-UI-React",
     description:
@@ -80,7 +80,7 @@ export const projectsData = [
   },
   {
     name: "OLX-clone",
-    image: "/project-images/olx.png",
+    image: "./project-images/olx.png",
     technologies: ["Firebase", "ReactJS"],
     git: "https://github.com/nayeem2208/OLX-clone-react",
     description:
@@ -88,7 +88,7 @@ export const projectsData = [
   },
   {
     name: "Mern-Auth",
-    image: "/project-images/Screenshot (164).jpg",
+    image: "./project-images/Screenshot (164).jpg",
     technologies: ["Redux", "ReactJS", "MongoDB", "ExpressJS", "NodeJS","Framer-motion","JWT"],
     git: "https://github.com/nayeem2208/SkyGoal-Assesment",
     description:

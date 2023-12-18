@@ -8,7 +8,7 @@ const Computer = () => {
   const computer = useGLTF("./scene.gltf");
 
   return (
-    <primitive object={computer.scene} scale={5} position-y={0} rotation-y={0} />
+    <primitive object={computer.scene} scale={6} position-y={0} rotation-y={0} />
   );
 };
 
@@ -25,6 +25,8 @@ const ComputerCanvas = () => {
         far: 200,
         position: [-4, 6, 8],
       }}
+      size={{ width: window.innerWidth, height: window.innerHeight }}
+  pixelRatio={window.devicePixelRatio}
     >
          <ambientLight/>
       <Suspense fallback={CanvasLoader}>
