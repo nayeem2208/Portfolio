@@ -41,7 +41,7 @@ function Home() {
             Hey, I'm
           </motion.p>
           <motion.p
-            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold sm:font-black"
+            className="text-2xl sm:text-5xl lg:text-6xl font-extrabold sm:font-black"
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: 150, opacity: 0 }}
             whileHover={{

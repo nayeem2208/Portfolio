@@ -41,8 +41,8 @@ const Contact = () => {
     setMessage("");
   };
   return (
-    <div className="flex flex-col items-center justify-center  mb-24">
-      <motion.div className="form-container flex flex-col items-center " >
+    <div className="flex flex-col items-center justify-center   mb-24">
+      <motion.div className="form-container flex flex-col items-center sm:w-2/5 " >
         <motion.h1
         whileHover={{textShadow: "0 0 40px rgba(69, 2, 150, 1)",}}
           style={{ fontFamily: "sans-serif" }}

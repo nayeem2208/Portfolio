@@ -22,7 +22,7 @@ function Aboutme() {
   }, [inView]);
 
   return (
-    <div className=" p-4 md:p-12 mt-8 overflow-x-hidden " ref={ref}>
+    <div className=" px-4 md:px-12 mt-8 overflow-x-hidden " ref={ref}>
       <motion.p
         whileHover={{
           x: 20,
@@ -37,7 +37,7 @@ function Aboutme() {
         initial="hidden"
         animate={mainControll}
         transition={{ duration: 0.6, delay: 0.6 }}
-        className="font-bold text-5xl flex text-violet-400 justify-center mt-12 mb-24"
+        className="font-bold text-5xl flex text-violet-400 justify-center mt-12 mb-6 md:mb-24"
       >
         {" "}
         About Me
@@ -52,18 +52,11 @@ function Aboutme() {
         animate={mainControll}
         transition={{ duration: 0.5, delay: 0.5 }}
       >
-        <div className=" w-full sm:w-3/6 relative mx-3">
-          {/* <Canvas camera={{ position: [-4, 3, 6]}} >
-            <ambientLight/>
-            <OrbitControls autoRotate/>
-            <Suspense fallback={null}>
-              <Scene/>
-            </Suspense>
-            <Environment preset="sunset"/>
-          </Canvas> */}
+        <div className=" w-full h-96  sm:w-3/6 relative mx-3 items-center">
+
           <ComputerCanvas />
         </div>
-        <div className="md:w-3/6 text-lg md:pr-8 md:mr-12 relative mt-8 md:mt-0">
+        <div className="md:w-3/6 text-lg md:pr-8 md:mr-12 relative mt-[-500]  md:mt-0">
           <motion.p className="text-violet-400" whileHover={{ scale: 1.01 }}>
             Hello, I'm{" "}
             <motion.span

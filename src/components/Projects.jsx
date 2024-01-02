@@ -29,7 +29,7 @@ function Projects() {
   return (
     <motion.div
       // ref={ref}
-      className="p-12 mt-12 flex flex-col justify-center items-center"
+      className="p-12 mt-12 md:mt-0 flex flex-col justify-center items-center"
       // variants={{
       //   hidden: { opacity: 0, y: 100 },
       //   visible: { opacity: 1, y: 0 },
